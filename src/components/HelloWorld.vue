@@ -2,12 +2,14 @@
   <div>
     <h1>封装组件练习专题</h1>
     <h2>{{num}}</h2>
-    <h2>{{radioValue}}</h2>
+    <h2>{{radioValue}}-----{{isSwitch}}</h2>
     <ImgUpload></ImgUpload>
     <count :num="num" :maxNum="10" :minNum="0" @count="getNum"></count>
     <RadioBox  v-model="radioValue" :radios="radios" :name="'radio'"></RadioBox>
     <RadioBox  v-model="radioValue2" :radios="radios2" :name="'radio2'"></RadioBox>
     <button @click="getRadioValue2">获取单选按钮</button>
+    <mySwitch v-model="isSwitch" activeText="按月付费" inactiveText="按年付费"></mySwitch>
+    <mySlider></mySlider>
   </div>
 </template>
 
@@ -15,12 +17,16 @@
 import ImgUpload from './templates/img_upload'
 import count from './templates/count'
 import RadioBox from './templates/RadioBox'
+import mySwitch from './templates/mySwitch'
+import mySlider from './templates/mySlider'
 export default {
   name: 'HelloWorld',
   components: {
     ImgUpload,
     count,
-    RadioBox
+    RadioBox,
+    mySwitch,
+    mySlider
   },
   data () {
     return {
@@ -29,6 +35,7 @@ export default {
       isChecked: false,
       radioValue: 'zh',
       radioValue2: '',
+      isSwitch: true,
       radios: [
         {content: '中文', value: 'zh'},
         {content: '俄文', value: 'ew'},
