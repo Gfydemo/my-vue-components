@@ -2,14 +2,14 @@
   <div>
     <h1>封装组件练习专题</h1>
     <h2>{{num}}</h2>
-    <h2>{{radioValue}}-----{{isSwitch}}</h2>
+    <h2>radio-->{{radioValue}}--switch-->{{isSwitch}}--sliderNum-->{{sliderNum}}</h2>
     <ImgUpload></ImgUpload>
     <count :num="num" :maxNum="10" :minNum="0" @count="getNum"></count>
     <RadioBox  v-model="radioValue" :radios="radios" :name="'radio'"></RadioBox>
     <RadioBox  v-model="radioValue2" :radios="radios2" :name="'radio2'"></RadioBox>
     <button @click="getRadioValue2">获取单选按钮</button>
     <mySwitch v-model="isSwitch" activeText="按月付费" inactiveText="按年付费"></mySwitch>
-    <mySlider></mySlider>
+    <mySlider v-model="sliderNum" :tooltip="true"></mySlider>
   </div>
 </template>
 
@@ -32,6 +32,7 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       num: 0,
+      sliderNum: 0,
       isChecked: false,
       radioValue: 'zh',
       radioValue2: '',

@@ -104,7 +104,7 @@ export default {
   background: #66b1ff;
 }
 .disable-btn {
-  background: #666;
+  background: #e4e7ed;
   cursor: not-allowed;
   transition: all ease-in .2s;
 }
