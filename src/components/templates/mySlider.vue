@@ -2,7 +2,7 @@
     <div class="slider-warpper">
         <div class="rall">
           <div class="rall-active" :style=" 'width:'+ activeWidth +'px' "></div>
-          <div class="dot" :style=" 'left:'+(activeWidth-10)+'px' "
+          <div class="dot" :style=" 'left:'+(activeWidth-8)+'px' "
                @mousedown="moveDot($event)">
             <div v-show="isShow">
               <div class="tooltip">{{num}}</div>
@@ -68,22 +68,22 @@ export default {
   .rall{
     position: relative;
     width: 600px;
-    height: 10px;
+    height: 5px;
     background: #e4e7ed;
-    border-radius: 4px;
+    border-radius: 2px;
   }
   .rall-active {
     position: absolute;
     left: 0;
-    height: 10px;
+    height: 5px;
     background: #35aff8;
     border-radius: 4px;
   }
   .dot {
     position: absolute;
     top: -8px;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     background: #fff;
     border: 3px solid #35aff8;
     border-radius: 50%;
@@ -97,8 +97,8 @@ export default {
   }
   .dot:active {
     top: -9px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
   .tooltip {
     position: absolute;
