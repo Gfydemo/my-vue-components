@@ -7,6 +7,7 @@
     <count :num="num" :maxNum="20" :minNum="0" @count="getNum"></count>
     <RadioBox  v-model="radioValue" :radios="radios" :name="'radio'"></RadioBox>
     <RadioBox  v-model="radioValue2" :radios="radios2" :name="'radio2'"></RadioBox>
+    <geng_radio v-model="radioValue2" :radios="radios2" name="c"></geng_radio>
     <GRadio v-model="radioValue3" :radios="radios3" name="g1"></GRadio>
     <button @click="getRadioValue2">获取单选按钮</button>
     <mySwitch v-model="isSwitch" activeText="按月付费" inactiveText="按年付费"></mySwitch>
